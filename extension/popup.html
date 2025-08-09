@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>TODO List</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h2>🗒️ TODO List</h2>
+
+    <div class="toolbar">
+      <select id="filter-category"></select>
+      <label class="checkbox">
+        <input type="checkbox" id="hide-done" /> Hide done
+      </label>
+      <span id="counts"></span>
+      <button id="refresh-btn" class="btn icon" title="Refresh">⟳</button>
+    </div>
+
+    <div id="status" class="status" hidden></div>
+
+    <div id="task-list" class="task-list"></div>
+
+    <div class="new-task">
+      <input type="text" id="new-title" placeholder="New task" />
+      <select id="new-category"></select>
+      <button id="create-task" class="btn primary">Add</button>
+    </div>
+
+    <div class="new-category">
+      <input type="text" id="new-cat-name" placeholder="New category" />
+      <button id="add-category" class="btn secondary">Add category</button>
+      <button id="clear-done" class="btn danger" title="Remove completed">
+        Clear done
+      </button>
+    </div>
+    <div id="toast" class="toast" hidden></div>
+    <script src="popup.js"></script>
+  </body>
+</html>

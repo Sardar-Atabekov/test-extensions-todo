@@ -1,0 +1,27 @@
+{
+  "name": "nextjs-sequelize-todo-project",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start -p 3000",
+    "migrate": "npx sequelize-cli db:migrate --config ./config/config.js --env development",
+    "migrate:undo": "npx sequelize-cli db:migrate:undo:all --config ./config/config.js --env development",
+    "migrate:prod": "npx sequelize-cli db:migrate --config ./config/config.js --env production",
+    "migrate:undo:prod": "npx sequelize-cli db:migrate:undo:all --config ./config/config.js --env production",
+    "seed:categories": "node createCategories.js"
+  },
+  "dependencies": {
+    "next": "14.2.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "sequelize": "6.32.1",
+    "pg": "8.11.0",
+    "pg-hstore": "2.3.4",
+    "dotenv": "16.0.3"
+  },
+  "devDependencies": {
+    "sequelize-cli": "6.6.0"
+  }
+}
